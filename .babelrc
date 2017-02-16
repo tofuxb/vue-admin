@@ -3,7 +3,12 @@
     ["es2015", { "modules": false }],
     "stage-2"
   ],
-  "plugins": ["transform-runtime", "transform-object-assign"],
+  "plugins": ["transform-runtime", "transform-object-assign", ["component", [
+    {
+      "libraryName": "element-ui",
+      "styleLibraryName": "theme-default"
+    }
+  ]]],
   "comments": false,
   "env": {
     "test": {

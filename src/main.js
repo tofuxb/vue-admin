@@ -6,11 +6,13 @@ import router from './router'
 import App from './App'
 
 // ElementUI Components
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
-Vue.use(ElementUI)
+import ElementUI from 'components/ElementUI'
+// import 'element-ui/lib/theme-default/index.css'
+// Vue.use(ElementUI)
 
-console.log(store)
+ElementUI.forEach(component => {
+  Vue.component(component.name, component)
+})
 
 /* eslint-disable no-new */
 window.app = new Vue({
