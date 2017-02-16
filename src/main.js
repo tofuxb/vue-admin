@@ -7,12 +7,7 @@ import App from './App'
 
 // ElementUI Components
 import ElementUI from 'components/ElementUI'
-// import 'element-ui/lib/theme-default/index.css'
-// Vue.use(ElementUI)
-
-ElementUI.forEach(component => {
-  Vue.component(component.name, component)
-})
+ElementUI.install(Vue)
 
 /* eslint-disable no-new */
 window.app = new Vue({
